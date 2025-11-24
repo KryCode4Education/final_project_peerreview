@@ -6,8 +6,8 @@ editor: visual
 ---
 
 ```{r}
-install.packages("here")
-install.packages("tidyverse")
+# install.packages("here")
+# install.packages("tidyverse")
 library(here)
 library(tidyverse)
 ```
@@ -19,3 +19,8 @@ bmw_sales<- read_csv(here("data", "bmw_sales_data.csv"))
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).
+
+```{r}
+bmw_sales_decade <- bmw_sales %>% 
+  filter(Year >= 2014)
+```
